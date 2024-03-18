@@ -4,7 +4,7 @@ import random
 import datetime
 
 # Токен вашего бота, полученный от BotFather
-TOKEN = '6501049936:AAHSDQMumjrM6QiGFi7uSQAe1S3-6hogg84'
+TOKEN = 'Your_Token'
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -12,8 +12,8 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
 def send_instructions(message):
     instructions = (
-        "Привет! Я телеграм-бот, который поможет тебе исправить HTML файл.\n"
-        "Пожалуйста, отправь мне желаемую оценку (от 0 до 150):"
+        "Hello! I'm a Telegram bot that helps you correct HTML files.\n"
+        "Please, send me the grade you received (from 0 to 150):"
     )
     bot.send_message(message.chat.id, instructions)
 
@@ -133,13 +133,13 @@ def process_grade(message):
             with open(f"storage\\{filename}.html", "rb") as file:
                 bot.send_document(message.chat.id, file)
 
-            bot.send_message(354398142, f'Пользователь {message.chat.id} - {message.chat.first_name} {message.chat.last_name} - {message.chat.username} сгенирировал новый HTML')
+            bot.send_message("YOUR_TELEGRAM_ID_HERE", f'Пользователь {message.chat.id} - {message.chat.first_name} {message.chat.last_name} - {message.chat.username} generated a new HTML')
 
         else:
-            bot.send_message(message.chat.id, "Пожалуйста, введите оценку от 0 до 150.")
+            bot.send_message(message.chat.id, "Please enter a grade from 0 to 150.")
 
     except ValueError:
-        bot.send_message(message.chat.id, "Неверный формат оценки. Пожалуйста, введите число от 0 до 150.")
+        bot.send_message(message.chat.id, "Invalid grade format. Please enter a number from 0 to 150.")
 
 
 if __name__ == "__main__":
