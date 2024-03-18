@@ -21,6 +21,9 @@ This Python script creates a Telegram bot that corrects HTML files based on user
 
 3. **Obtain a Bot Token:**
    Get a bot token from BotFather on Telegram and replace the TOKEN variable in the script with your token.
+   
+5. **Change admins telegram id**
+   On line 136 change "YOUR_TELEGRAM_ID_HERE" to your telegram id
 
 ## Usage: 
 1. **Run the Python Script:**
