@@ -13,7 +13,7 @@ This Python script creates a Telegram bot that corrects HTML files based on user
 ## Installation:
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your_username/telegram-html-correction-bot.git
+   git clone (https://github.com/Jitters007/HTMLEditor.git
 
 2. **Install Dependencies:**
    ```bash
